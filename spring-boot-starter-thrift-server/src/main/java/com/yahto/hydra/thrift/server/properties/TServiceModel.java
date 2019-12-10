@@ -1,5 +1,9 @@
 package com.yahto.hydra.thrift.server.properties;
 
+/**
+ * @author yahto
+ * @date 2019/12/9 7:54 PM
+ */
 public final class TServiceModel {
 
     /**

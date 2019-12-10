@@ -7,6 +7,10 @@ import org.springframework.cloud.commons.util.SpringFactoryImportSelector;
 
 import java.util.Set;
 
+/**
+ * @author yahto
+ * @date 2019/12/9 7:54 PM
+ */
 @Slf4j
 public class ThriftServerConfigurationSelector extends SpringFactoryImportSelector<EnableThriftServer> {
 

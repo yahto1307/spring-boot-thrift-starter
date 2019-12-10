@@ -3,9 +3,10 @@ package com.yahto.hydra.thrift.server.properties;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-import java.util.ArrayList;
-import java.util.List;
-
+/**
+ * @author yahto
+ * @date 2019/12/9 7:54 PM
+ */
 @Data
 @ConfigurationProperties(prefix = "spring.thrift.server")
 public class ThriftServerProperties {
@@ -19,17 +20,6 @@ public class ThriftServerProperties {
      * 服务端口号
      */
     private int port = 25000;
-
-    /**
-     * zookeeper的地址
-     */
-    private String zkHost;
-
-    /**
-     * 服务标签
-     */
-    private List<String> tags = new ArrayList<>();
-
     /**
      * 服务的工作线程队列容量
      */
@@ -52,4 +42,6 @@ public class ThriftServerProperties {
     private THsHaServerProperties hsHa;
 
     private TThreadedSelectorServerProperties threadedSelector;
+
+    private ThriftServerRegisterProperties thriftServerRegisterProperties;
 }

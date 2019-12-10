@@ -44,6 +44,11 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!--thrift-->
+        <dependency>
+            <groupId>org.apache.thrift</groupId>
+            <artifactId>libthrift</artifactId>
+        </dependency>
         <!-- curator-framework -->
         <dependency>
             <groupId>org.apache.curator</groupId>
