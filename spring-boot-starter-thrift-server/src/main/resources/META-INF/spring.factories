@@ -1,0 +1,3 @@
+com.yahto.hydra.thrift.server.annotation.EnableThriftServer=\
+com.yahto.hydra.thrift.server.ThriftServerAutoConfiguration,\
+com.yahto.hydra.thrift.server.ThriftServerRegisterAutoConfiguration
