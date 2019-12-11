@@ -7,7 +7,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @author yahto
  * @date 2019/12/9 7:54 PM
  */
-@Data
 @ConfigurationProperties(prefix = "spring.thrift.server")
 public class ThriftServerProperties {
 
@@ -43,5 +42,69 @@ public class ThriftServerProperties {
 
     private TThreadedSelectorServerProperties threadedSelector;
 
-    private ThriftServerRegisterProperties thriftServerRegisterProperties;
+    private ThriftServerRegisterProperties register;
+
+    public String getServiceId() {
+        return serviceId;
+    }
+
+    public void setServiceId(String serviceId) {
+        this.serviceId = serviceId;
+    }
+
+    public int getPort() {
+        return port;
+    }
+
+    public void setPort(int port) {
+        this.port = port;
+    }
+
+    public int getWorkerQueueCapacity() {
+        return workerQueueCapacity;
+    }
+
+    public void setWorkerQueueCapacity(int workerQueueCapacity) {
+        this.workerQueueCapacity = workerQueueCapacity;
+    }
+
+    public String getServiceModel() {
+        return serviceModel;
+    }
+
+    public void setServiceModel(String serviceModel) {
+        this.serviceModel = serviceModel;
+    }
+
+    public TThreadPoolServerProperties getThreadPool() {
+        return threadPool;
+    }
+
+    public void setThreadPool(TThreadPoolServerProperties threadPool) {
+        this.threadPool = threadPool;
+    }
+
+    public THsHaServerProperties getHsHa() {
+        return hsHa;
+    }
+
+    public void setHsHa(THsHaServerProperties hsHa) {
+        this.hsHa = hsHa;
+    }
+
+    public TThreadedSelectorServerProperties getThreadedSelector() {
+        return threadedSelector;
+    }
+
+    public void setThreadedSelector(TThreadedSelectorServerProperties threadedSelector) {
+        this.threadedSelector = threadedSelector;
+    }
+
+    public ThriftServerRegisterProperties getRegister() {
+        return register;
+    }
+
+    public void setRegister(ThriftServerRegisterProperties register) {
+        this.register = register;
+    }
 }

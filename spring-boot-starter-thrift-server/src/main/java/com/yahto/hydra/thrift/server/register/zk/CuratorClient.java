@@ -1,7 +1,6 @@
 package com.yahto.hydra.thrift.server.register.zk;
 
 import com.yahto.hydra.thrift.server.exception.ThriftServerRegisterException;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.curator.framework.CuratorFramework;
@@ -21,7 +20,6 @@ import java.util.concurrent.TimeUnit;
  * @author yahto
  * @date 2019/12/4 4:14 PM
  */
-@Data
 @NoArgsConstructor
 @Slf4j
 public class CuratorClient {
@@ -355,5 +353,25 @@ public class CuratorClient {
             throw new ThriftServerRegisterException("tree cache can not be null");
         }
         cache.getListenable().removeListener(listener);
+    }
+
+    public static String getDefaultCharset() {
+        return DEFAULT_CHARSET;
+    }
+
+    public CuratorFramework getClient() {
+        return client;
+    }
+
+    public void setClient(CuratorFramework client) {
+        this.client = client;
+    }
+
+    public String getCharset() {
+        return charset;
+    }
+
+    public void setCharset(String charset) {
+        this.charset = charset;
     }
 }

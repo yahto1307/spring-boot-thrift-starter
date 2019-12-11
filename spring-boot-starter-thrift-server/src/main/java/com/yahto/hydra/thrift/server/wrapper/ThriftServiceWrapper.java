@@ -9,7 +9,6 @@ import java.util.Objects;
  * @date 2019/12/9 8:38 PM
  * 对每一个代理类服务的包装
  */
-@Data
 public class ThriftServiceWrapper {
     private String thriftServiceName;
 
@@ -66,5 +65,53 @@ public class ThriftServiceWrapper {
                 "version=" + version + "," +
                 "thriftService=" + thriftService +
                 "}";
+    }
+
+    public String getThriftServiceName() {
+        return thriftServiceName;
+    }
+
+    public void setThriftServiceName(String thriftServiceName) {
+        this.thriftServiceName = thriftServiceName;
+    }
+
+    public String getThriftServiceSignature() {
+        return thriftServiceSignature;
+    }
+
+    public void setThriftServiceSignature(String thriftServiceSignature) {
+        this.thriftServiceSignature = thriftServiceSignature;
+    }
+
+    public Class<?> getType() {
+        return type;
+    }
+
+    public void setType(Class<?> type) {
+        this.type = type;
+    }
+
+    public Class<?> getIfaceType() {
+        return ifaceType;
+    }
+
+    public void setIfaceType(Class<?> ifaceType) {
+        this.ifaceType = ifaceType;
+    }
+
+    public double getVersion() {
+        return version;
+    }
+
+    public void setVersion(double version) {
+        this.version = version;
+    }
+
+    public Object getThriftService() {
+        return thriftService;
+    }
+
+    public static Double getDefaultVersion() {
+        return DEFAULT_VERSION;
     }
 }

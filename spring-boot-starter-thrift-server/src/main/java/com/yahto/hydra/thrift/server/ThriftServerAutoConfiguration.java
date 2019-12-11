@@ -6,6 +6,7 @@ import com.yahto.hydra.thrift.server.context.ThriftServerContext;
 import com.yahto.hydra.thrift.server.exception.ThriftServerException;
 import com.yahto.hydra.thrift.server.exception.ThriftServerInstantiateException;
 import com.yahto.hydra.thrift.server.properties.ThriftServerProperties;
+import com.yahto.hydra.thrift.server.properties.ThriftServerRegisterProperties;
 import com.yahto.hydra.thrift.server.wrapper.ThriftServiceWrapper;
 import com.yahto.hydra.thrift.server.wrapper.ThriftServiceWrapperFactory;
 import lombok.extern.slf4j.Slf4j;

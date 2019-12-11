@@ -8,7 +8,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @date 2019/12/9 7:54 PM
  */
 
-@Data
 @ConfigurationProperties(prefix = "spring.thrift.server.hs-ha")
 public class THsHaServerProperties {
 
@@ -26,4 +25,28 @@ public class THsHaServerProperties {
      * 线程的存活时间 (min)
      */
     private int keepAliveTime = 1;
+
+    public int getMinWorkerThreads() {
+        return minWorkerThreads;
+    }
+
+    public void setMinWorkerThreads(int minWorkerThreads) {
+        this.minWorkerThreads = minWorkerThreads;
+    }
+
+    public int getMaxWorkerThreads() {
+        return maxWorkerThreads;
+    }
+
+    public void setMaxWorkerThreads(int maxWorkerThreads) {
+        this.maxWorkerThreads = maxWorkerThreads;
+    }
+
+    public int getKeepAliveTime() {
+        return keepAliveTime;
+    }
+
+    public void setKeepAliveTime(int keepAliveTime) {
+        this.keepAliveTime = keepAliveTime;
+    }
 }

@@ -7,7 +7,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @author yahto
  * @date 2019/12/9 7:54 PM
  */
-@Data
 @ConfigurationProperties(prefix = "spring.thrift.server.thread-pool")
 public class TThreadPoolServerProperties {
 
@@ -30,4 +29,36 @@ public class TThreadPoolServerProperties {
      * 线程的存活时间
      */
     private int keepAliveTime = 1;
+
+    public int getMinWorkerThreads() {
+        return minWorkerThreads;
+    }
+
+    public void setMinWorkerThreads(int minWorkerThreads) {
+        this.minWorkerThreads = minWorkerThreads;
+    }
+
+    public int getMaxWorkerThreads() {
+        return maxWorkerThreads;
+    }
+
+    public void setMaxWorkerThreads(int maxWorkerThreads) {
+        this.maxWorkerThreads = maxWorkerThreads;
+    }
+
+    public int getRequestTimeout() {
+        return requestTimeout;
+    }
+
+    public void setRequestTimeout(int requestTimeout) {
+        this.requestTimeout = requestTimeout;
+    }
+
+    public int getKeepAliveTime() {
+        return keepAliveTime;
+    }
+
+    public void setKeepAliveTime(int keepAliveTime) {
+        this.keepAliveTime = keepAliveTime;
+    }
 }

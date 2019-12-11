@@ -7,7 +7,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @author yahto
  * @date 2019/12/9 7:54 PM
  */
-@Data
 @ConfigurationProperties(prefix = "spring.thrift.server.threaded-selector")
 public class TThreadedSelectorServerProperties {
 
@@ -36,4 +35,44 @@ public class TThreadedSelectorServerProperties {
      * 工作线程池中的线程的存活时间
      */
     private int keepAliveTime = 5;
+
+    public int getAcceptQueueSizePerThread() {
+        return acceptQueueSizePerThread;
+    }
+
+    public void setAcceptQueueSizePerThread(int acceptQueueSizePerThread) {
+        this.acceptQueueSizePerThread = acceptQueueSizePerThread;
+    }
+
+    public int getSelectorThreads() {
+        return selectorThreads;
+    }
+
+    public void setSelectorThreads(int selectorThreads) {
+        this.selectorThreads = selectorThreads;
+    }
+
+    public int getMinWorkerThreads() {
+        return minWorkerThreads;
+    }
+
+    public void setMinWorkerThreads(int minWorkerThreads) {
+        this.minWorkerThreads = minWorkerThreads;
+    }
+
+    public int getMaxWorkerThreads() {
+        return maxWorkerThreads;
+    }
+
+    public void setMaxWorkerThreads(int maxWorkerThreads) {
+        this.maxWorkerThreads = maxWorkerThreads;
+    }
+
+    public int getKeepAliveTime() {
+        return keepAliveTime;
+    }
+
+    public void setKeepAliveTime(int keepAliveTime) {
+        this.keepAliveTime = keepAliveTime;
+    }
 }
